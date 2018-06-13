@@ -1,0 +1,40 @@
+﻿Se neceista realiza estos cambios al informe:
+Estrato cliente: debe salir con un cero a la izquierda (EJ: 01)
+Estado cliente: debe salir con un cero a la izquierda (EJ: 01)
+tipo de zona: debe salir con un cero a la izquierda (EJ: 01) ----> Falto por corregir
+Bloqueado: Cuando este bloqueado, cambiar el valor X por 01
+Correo1 y Correo2: Revisar ya no salio niguna data
+Cupo credito: bede salir sin decimales (sale 562500.00, deberia salir 562500)
+Condición pago: Se debe realizar una concatenacion con estos 2 caracteres "D0" a la 
+				izquierda del dato, (EJ: D021)
+				
+Adicional:				
+Se solicita el maestro de divisionales que exisste en osiris para cada marca
+
+Para esta nueva generacion del informe necesito 2 zonas de carmel y una de PCFK
+
+Lectura del informe:
+Campo Zona en ROJO: Esto quiere decir:
+                        1- El deudor tiene diferente la zona en el ERP y el Legado
+						2- El deudor no exsite en el ERP para la organizacion de ventas parametrizada en la entrada
+						3- El deudor existe en ERP pero no cumplio ninguna de los parametros
+						4- El deudor existe en el legado pero no en el ERP
+						
+Campo Zona en AMARILLO: Esto quiere decir:
+						1- El deudor existe en el ERP cumpliendo con los parametros de entrada, pero tiene 
+						almenos un campo diferente entre los sistemas
+
+Campo Zona en VERDE: Esto quiere decir:
+						1- El deudor existe en el ERP cumpliendo con los paremetros de entrada, pero todos
+						los campos estan iguales
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Numero Divisional: Se debe realizar una transformacion antes de cargar a SAP para realizar la comparacion, esto por que el Osirsi no se tiene el dato de
+					divicional de SAP
+					Se propone que se actuelicen en OSirs los datos maestros de divisional para que queden iguales a SAP (los datos maestros, mas NO, el
+					divicional asociado al deudor)
+Directora Zona: Se debe realizar una transformacion antes de cargar a SAP para realizar la comparacion, esto por que el Osrisi no se tieene el dato de
+				numero de personal de la directora de zona
+Falata corregir el dato de tipo de zona				
+						
